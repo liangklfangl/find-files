@@ -1,0 +1,33 @@
+{
+  "name": "grob-files",
+  "version": "0.0.1",
+  "description": "Find files with special suffix in one or many folders",
+  "main": "index.js",
+  "dependencies": {
+    "ramda": "^0.23.0",
+    "winpath": "^0.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liangklfangl/find-files.git"
+  },
+ "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "find-files",
+    "file",
+    "path",
+    "recursive"
+  ],
+  "author": "liangklfangl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liangklfangl/find-files/issues"
+  },
+  "homepage": "https://github.com/liangklfangl/find-files#readme"
+}
