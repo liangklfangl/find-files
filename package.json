@@ -1,6 +1,6 @@
 {
   "name": "grob-files",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Find files with special suffix in one or many folders",
   "main": "index.js",
   "dependencies": {
@@ -15,7 +15,7 @@
     "type": "git",
     "url": "git+https://github.com/liangklfangl/find-files.git"
   },
- "files": [
+  "files": [
     "index.js"
   ],
   "keywords": [
