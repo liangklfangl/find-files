@@ -4,8 +4,8 @@ $ npm install --save find-file
 ```
 ### Usage
 ```js
-const getFiles = require('find-file');
-const mdfiles = getFiles(["./filelists",'md',true]);
+const Grob = require('find-file');
+const mdfiles = Grob.getFiles(["./filelists"],'md',true);
 //Then you will get all markdown files
 ```
 ### Parameters
@@ -43,6 +43,26 @@ When this one is set true, then we will get something like bellow with file stru
   'filelists/md/fol/index.md',
   'filelists/md/index.md',
 ]
+```
+
+### API
+
+(1)getFiles
+
+Get files with special suffix
+
+(2)traverse
+
+Get filename with path prefixed , it is a inverse operation of getFiles.
+```js
+Grob.traverse(files,function(filename){
+  if(!filename)
+  console.log(filename);
+ //  filelists/hello.md
+  // filelists/index.md
+  // filelists/md/fol/index.md
+  // filelists/md/index.md
+})
 ```
 
 

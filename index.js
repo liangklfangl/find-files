@@ -65,5 +65,17 @@ function getFiles(source,ext,isObj) {
     return mds
   }
 };
-
-module.exports = getFiles
+function traverse(filesTree, fn) {
+  Object.keys(filesTree).forEach((key) => {
+    const value = filesTree[key];
+    if (typeof value === 'string') {
+      fn(value);
+      return;
+    }
+    traverse(value, fn);
+  });
+};
+module.exports = {
+  getFiles,
+  traverse
+}
