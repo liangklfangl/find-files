@@ -4,6 +4,8 @@ const path = require('path');
 const winPath = require('winpath');
 let extension = "";
 const rxSep = new RegExp(`[${path.sep}.]`);
+const Smangle = require("string-mangle");
+const util = require("util");
 function isDirectory(filename) {
   return fs.statSync(filename).isDirectory();
 }
@@ -65,6 +67,23 @@ function getFiles(source,ext,isObj) {
     return mds
   }
 };
+/**
+ * Make file object obtained to require calls
+ * @param  {[type]} source [description]
+ * @param  {[type]} ext    [description]
+ * @return {[type]}        [description]
+ */
+function getRequiredFile(source,ext){
+  const files = getFiles(source,ext,true);
+ // console.log("stringifyTree return--->",Smangle.stringifyTree(files));
+  return Smangle.stringifyTree(files);
+}
+/**
+ * Traverse file object to get filename
+ * @param  {[type]}   filesTree [description]
+ * @param  {Function} fn        [description]
+ * @return {[type]}             [description]
+ */
 function traverse(filesTree, fn) {
   Object.keys(filesTree).forEach((key) => {
     const value = filesTree[key];
@@ -77,5 +96,6 @@ function traverse(filesTree, fn) {
 };
 module.exports = {
   getFiles,
-  traverse
+  traverse,
+  getRequiredFile
 }

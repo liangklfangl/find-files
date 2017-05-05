@@ -65,4 +65,24 @@ Grob.traverse(files,function(filename){
 })
 ```
 
+(3)getRequiredFile(source,suffix)
+
+Source and suffix as described above. Invoke this method you will get something like bellow:
+```js
+ {
+  'filelists': {
+    'hello': require('C:/Users/Administrator/Desktop/find-files/filelists/hello.md'),
+    'index': require('C:/Users/Administrator/Desktop/find-files/filelists/index.md'),
+    'md': {
+      'fol': {
+        'index': require('C:/Users/Administrator/Desktop/find-files/filelists/md/fol/index.md')
+      },
+      'index': require('C:/Users/Administrator/Desktop/find-files/filelists/md/index.md')
+    }
+  }
+}
+```
+
+
+
 

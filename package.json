@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "ramda": "^0.23.0",
+    "string-mangle": "0.0.4",
     "winpath": "^0.0.1"
   },
   "devDependencies": {},
