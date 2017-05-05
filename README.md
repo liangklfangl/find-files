@@ -47,7 +47,7 @@ When this one is set true, then we will get something like bellow with file stru
 
 ### API
 
-(1)getFiles
+(1)getFiles(source,suffix,isObject)
 
 Get files with special suffix
 
