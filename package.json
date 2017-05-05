@@ -1,6 +1,6 @@
 {
   "name": "grob-files",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Find files with special suffix in one or many folders",
   "main": "index.js",
   "dependencies": {
